@@ -16,12 +16,16 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    npm config set @sap:registry "https://npm.sap.com"
     npm install
-    npm run build
-  displayName: 'npm install and build'
+  displayName: 'npm install'
 
-- task: PublishCodeCoverageResults@1
-  condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
+- script: |
+    npm run test-azure
+  displayName: 'Execute Unit Tests'
+
+- task: PublishTestResults@2
+  condition: succeededOrFailed()
   inputs:
-    codeCoverageTool: cobertura
-    summaryFileLocation: '**/cobertura-coverage.xml'
+    testRunner: JUnit
+    testResultsFiles: '**/test-results.xml'
