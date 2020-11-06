@@ -15,6 +15,30 @@
      <ENTRY>ABAP Git Demo</ENTRY>
      <LENGTH>13</LENGTH>
     </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_NO1</KEY>
+     <ENTRY>First Value</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_NO2</KEY>
+     <ENTRY>Secon Value</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>R_ADD</KEY>
+     <ENTRY>Addition</ENTRY>
+     <LENGTH>16</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>R_SUB</KEY>
+     <ENTRY>Subtraction</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
    </TPOOL>
   </asx:values>
  </asx:abap>
