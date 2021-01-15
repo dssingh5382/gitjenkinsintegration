@@ -1,5 +1,7 @@
 pipeline {
     
+    @Library('piper-lib-os') _
+    
     agent any
     
     stages {
