@@ -1,15 +1,14 @@
-@Library('piper-lib-os') _
-node() {
-    stage('prepare') {
-        checkout scm
-        setupCommonPipelineEnvironment script:this
+pipeline {
+    
+    agent any
+    
+    stages {
+        
+        stage("build") {
+
+            steps {
+                echo 'Building the application...!'
+            }
+        }
     }
-}
-
-stage('build') {
-    mtaBuild script: this
-}
-
-stage('deploy') {
-    cloudFoundryDeploy script: this
 }
